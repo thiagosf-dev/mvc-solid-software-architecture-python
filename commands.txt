@@ -1,0 +1,8 @@
+pylint --generate-rcfile > .pylintrc
+pylint --generate-rcfile | out-file -encoding utf8 .pylintrc
+
+pylint [nome_do_arquivo].py
+
+python.exe -m pip install --upgrade pip
+
+pip3 freeze > requirements.txt
