@@ -9,5 +9,11 @@
     "editor.defaultFormatter": "ms-python.python",
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "cweijan.vscode-mysql-client2"
+    },
+    "[ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     }
 }
