@@ -6,3 +6,6 @@ pylint [nome_do_arquivo].py
 python.exe -m pip install --upgrade pip
 
 pip3 freeze > requirements.txt
+
+pre-commit --version
+pre-commit install
