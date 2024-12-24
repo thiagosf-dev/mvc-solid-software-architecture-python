@@ -1,0 +1,10 @@
+[run]
+omit =
+    */__init__.py
+
+[report]
+show_missing = true
+skip_covered = false
+
+[html]
+directory = htmlcov

@@ -1,11 +1,26 @@
+source venv/Scripts/activate
+
+virtualenv venv
+virtualenv -p python3.11 venv
+
 pylint --generate-rcfile > .pylintrc
 pylint --generate-rcfile | out-file -encoding utf8 .pylintrc
 
 pylint [nome_do_arquivo].py
 
 python.exe -m pip install --upgrade pip
-
-pip3 freeze > requirements.txt
+python -m venv venv
 
 pre-commit --version
 pre-commit install
+pre-commit run pytest --all-files
+
+pip3 freeze > requirements.txt
+pip3 install pytest-cov
+pip3 show pytest-cov
+
+pytest -v
+pytest -v -s
+pytest --cov=. --cov-report=html
+pytest --cov=. --cov-report=term-missing --cov-fail-under=90
+pytest --cov=. --cov-report=term-missing --cov-fail-under=90 --cov-exclude=".*__init__.py"

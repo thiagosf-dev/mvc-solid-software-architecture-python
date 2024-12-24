@@ -1,14 +1,33 @@
 repos:
-  - repo: local
-    hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint
-        language: system
-        types: [python]
-        args: [
-            "-rn", # Only display messages
-            "-sn", # Don't display the score
-            "--rcfile=.pylintrc", # Link to your config file
-            "--load-plugins=pylint.extensions.docparams", # Load an extension
-          ]
+    - repo: local
+      hooks:
+          - id: pylint
+            name: pylint
+            entry: pylint
+            language: system
+            types: [python]
+            args: [
+                    "-rn", # Only display messages
+                    "-sn", # Don't display the score
+                    "--rcfile=.pylintrc", # Link to your config file
+                    "--load-plugins=pylint.extensions.docparams", # Load an extension
+                ]
+          - id: pytest
+            name: pytest
+            entry: pytest
+            language: system
+            types: [python]
+            args:
+                [
+                    "-v",
+                    "--cov=.",
+                    "--cov-report=term-missing",
+                    "--cov-fail-under=1",
+                    "--cov-report=html",
+                    "--cov-config=.coveragerc",
+                    "--disable-warnings",
+                    "--disable-pytest-warnings",
+                    "--maxfail=0",
+                    "--no-cov-on-fail",
+                ]
+            pass_filenames: false
