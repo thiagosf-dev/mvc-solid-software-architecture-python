@@ -5,6 +5,7 @@ disable =
     C0115,  # Missing class docstring
     C0116,  # Missing function or method docstring
     C0209,  # Class has no __init__ method
+    C0321,  # Multiple-statements
     E0015,  # No return at end of function
     W0703,  # Catching too general exception Exception
 
