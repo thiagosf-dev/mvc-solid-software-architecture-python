@@ -13,11 +13,11 @@ class PeopleTable(Base):
 
     age = Column(BIGINT, nullable=False)
 
-    pets_id = Column(BIGINT, ForeignKey('pets.id'))
+    pet_id = Column(BIGINT, ForeignKey('pets.id'))
 
     def __repr__(self):
         return (
             f"People [id={self.id}, first_name={
                 self.first_name}, last_name={self.last_name}, "
-            f"age={self.age}, pets_id={self.pets_id}]"
+            f"age={self.age}, pet_id={self.pet_id}]"
         )
