@@ -8,6 +8,7 @@ disable =
     C0321,  # Multiple-statements
     E0015,  # No return at end of function
     W0703,  # Catching too general exception Exception
+    W0719,  # Broad-exception-raised
 
 # Add files or directories to the blacklist. They should be base names, not
 
