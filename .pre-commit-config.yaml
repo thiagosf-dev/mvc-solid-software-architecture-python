@@ -19,7 +19,8 @@ repos:
             types: [python]
             args:
                 [
-                    "-v",
+                    "-vv",
+                    "-s",
                     "--cov=.",
                     "--cov-report=term-missing",
                     "--cov-fail-under=1",
