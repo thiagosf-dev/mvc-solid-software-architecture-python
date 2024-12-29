@@ -16,6 +16,8 @@ dill==0.3.8
 distlib==0.3.8
 executing==2.1.0
 filelock==3.13.4
+Flask==3.0.3
+Flask-Cors==4.0.0
 greenlet==3.1.1
 identify==2.5.36
 idna==3.10
@@ -72,4 +74,4 @@ tzdata==2024.2
 urllib3==2.2.3
 virtualenv==20.26.0
 wcwidth==0.2.13
-Werkzeug==2.3.0
+Werkzeug==3.1.3
