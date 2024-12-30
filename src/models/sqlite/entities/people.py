@@ -17,7 +17,7 @@ class PeopleTable(Base):
 
     def __repr__(self):
         return (
-            f"People [id={self.id}, first_name={
-                self.first_name}, last_name={self.last_name}, "
-            f"age={self.age}, pet_id={self.pet_id}]"
+            f"People [id={self.id}, first_name={self.first_name}, "
+            f"last_name={self.last_name}, age={
+                self.age}, pets_id={self.pets_id}]"
         )
